@@ -30,7 +30,7 @@ public class StringsLec {
         System.out.println("indexOf of n " + email.indexOf("n"));
         System.out.println("lastIndexOf of n " + email.lastIndexOf("n"));
 
-        System.out.println("chat at " +  email.charAt(3)); // returns the @ on fer@...
+        System.out.println("char at " +  email.charAt(3)); // returns the @ on fer@...
 
         for(int x = 0; x < email.length(); x++){
             System.out.println("email.charAt(x) = " + email.charAt(x));
@@ -46,6 +46,10 @@ public class StringsLec {
         }
 
         System.out.println("Your name is : " + firstName);
+
+        String domain = email.substring(email.indexOf("@") + 1);
+//         String domain = email.substring(email.indexOf("@") + 1, email.length());
+        System.out.println("domain = " + domain);
 
     }
 
