@@ -9,19 +9,40 @@ public class StringsLec {
         int age = 30;
         Integer numOfStudent = 123;
 
-        System.out.println("What's your name?");
-        firstName = sc.nextLine();
+//        System.out.println("What's your name?");
+//        firstName = sc.nextLine();
 
         //!firstName.equals("Fer") not equals
-        if(firstName.equals("Fer")){
-            System.out.println("firstName is Fer");
-        } else {
-            System.out.println("firstName is not Fer");
+//        if(firstName.equals("Fer")){
+//            System.out.println("firstName is Fer");
+//        } else {
+//            System.out.println("firstName is not Fer");
+//        }
+
+        System.out.println("What's your email? ");
+        String email = sc.nextLine();
+        email = email.replace(' ', '_');
+        System.out.println("email.length() = " + email.length());
+
+        System.out.println("index of @ " + email.indexOf("@"));
+        // System.out.println("index of @ " + email.indexOf("@@")); returned a -1
+
+        System.out.println("indexOf of n " + email.indexOf("n"));
+        System.out.println("lastIndexOf of n " + email.lastIndexOf("n"));
+
+        System.out.println("chat at " +  email.charAt(3)); // returns the @ on fer@...
+
+        for(int x = 0; x < email.length(); x++){
+            System.out.println("email.charAt(x) = " + email.charAt(x));
         }
 
-        System.out.println("What's your email?");
-        if(sc.nextLine().equalsIgnoreCase("fer@codeup.com")){
+        if(email.equalsIgnoreCase("fer@codeup.com")){
             System.out.println("You're an admin");
+        }
+
+        // to check if you work at the company
+        if(email.toLowerCase().endsWith("codeup.com")){
+            System.out.println("Welcome co-worker");
         }
 
         System.out.println("Your name is : " + firstName);
