@@ -4,6 +4,7 @@ public class HelloWorld {
 
         System.out.println("Hello, World!");
 
+        String helloMsg = MethodsLec.tenureMessage("Casey", "HTML", 15);
     }
 
 }
