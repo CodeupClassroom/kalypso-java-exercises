@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package syntax;
 
 public class FizzBuzz {
@@ -45,4 +46,7 @@ public class FizzBuzz {
         int n = 30;
         fizzBuzzFor(n);
     }
+=======
+package syntax;public class FizzBuzz {
+>>>>>>> d08004d116d0b54bde64d3ee40c84de23517ca45
 }
