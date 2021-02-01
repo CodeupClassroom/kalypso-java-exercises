@@ -1,39 +1,36 @@
-class Person {                  // this is a blueprint for a type of object
-    public String firstName;    // this is a property
-    public String lastName;     // another property
-    static long WORLD_POPULATION = 8000000000L; // static means it belongs to the class, not owned by an instance of the class
+class Person {
+    private String name;
 
-    public String sayHello() {  // this is a method
-        return String.format("Hello from %s %s!", firstName, lastName);
+    Person(String name){
+        this.name = name;
     }
 
-    Person(){
-        WORLD_POPULATION++;
+    public String getName(){
+//TODO: return the person's name
+        return this.name;
+    }
+    public void setName(String name){
+//TODO: change the name property to the passed value
+        this.name = name;
+    }
+    public void sayHello(){
+//TODO: print a message to the console using the person's name
+        System.out.println("Hello, my name is " + this.name);
     }
 
-    Person(String firstName, String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        WORLD_POPULATION++;
+    public static void main(String[] args){
+        Person bob = new Person("Bob");
+        System.out.println(bob.getName());
+        bob.setName("Bobby");
+        bob.sayHello();
+
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person2.setName("Jane");
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
     }
 
-    public static void main(String[] args) {
-        System.out.println(Person.WORLD_POPULATION);
-        Person fer = new Person();  // fer is an instance of Person
-        fer.firstName = "Fernando";
-        fer.lastName = "Mendoza";
-        System.out.println(fer.sayHello());
-        // prints "Hello from Fernando Mendoza!"
-
-        Person chris = new Person();
-        chris.firstName = "Chris";
-        chris.lastName = "Cyr";
-        System.out.println(chris.sayHello());
-
-        Person daniel = new Person("Daniel", "Fryar");
-        System.out.println(daniel.sayHello());
-        Person casey = new Person("Casey", "Friday");
-        System.out.println(Person.WORLD_POPULATION);
-
-    }
 }

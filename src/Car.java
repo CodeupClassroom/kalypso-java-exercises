@@ -1,5 +1,6 @@
 public class Car {
-    static Person inventor= new Person("Karl", "Benz");
+//    static Person inventor= new Person("Karl", "Benz");
+    static String inventor = "Karl Benz";
     private String make;
     private String model;
     private int year;
