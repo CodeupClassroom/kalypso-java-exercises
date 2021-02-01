@@ -11,10 +11,14 @@ public class Input {
     }
 
     String getString(){
+        System.out.printf("Please enter a string: %n");
+
         return this.scanner.nextLine();
     }
 
     boolean yesNo(){
+        System.out.printf("Please enter \"yes\" or \"no\": %n");
+
         String answer = this.scanner.nextLine();
         return (answer.toLowerCase().equals("y") ||
                 answer.toLowerCase().equals("yes"));
@@ -35,11 +39,13 @@ public class Input {
     }
 
     double getDouble(){
+        System.out.printf("Please enter a double: %n");
         return this.scanner.nextDouble();
     }
 
     double getDouble(double min, double max){
         while (true) {
+            System.out.printf("Please enter a double between %f and %f: %n",min,max);
             double answer = this.scanner.nextDouble();
             if (answer >= min && answer <= max)
                 return answer;
