@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayLec {
@@ -59,14 +60,84 @@ public class ArrayLec {
         //       3. Create Getters and Setters for names / brainwavefreq
         //       4. Create a method to display instructor stats
         //       5. Initialize an array full of instructor objects
-        //       6. Instantiate three instructors (casey,vivian,trant)
+
+        // define a constant, that will be the total number of instructors
+        final int KALYPSO_TEAM = 3;
+
+        // we can instantiate an array that holds (almost) any data type
+        Instructor[] team = new Instructor[KALYPSO_TEAM];
+
+        //       6. Instantiate three instructors (casey,daniel,fernando)
+        Instructor casey = new Instructor("Casey", "Friday");
+        Instructor daniel = new Instructor("Daniel", "Fryar");
+        Instructor fernando = new Instructor("Fernando", "Mendoza");
+
         //       7. Set each instructor's BrainWaveFrequency
+        casey.setBrainWaveFrequency(4600000); // 4.6 GHz
+        daniel.setBrainWaveFrequency(12); // 12 Hz
+        fernando.setBrainWaveFrequency(800); // 800 Hz
+
         //       8. Add those instructors in the Instructor object array
+        team[0] = casey;
+        team[1] = daniel;
+        team[2] = fernando;
+
         //       9. Iterate through the Instructor object array, and display each instructor's stats
+        for (int i=0; i < team.length; i++) {
+            System.out.println(team[i].displayStats());
+        }
+        System.out.println();
+
+        for (Instructor single : team) {
+            System.out.println(single.displayStats());
+        }
+        System.out.println();
+
         //       10. Create an array with only first names in it, and display it to the console
+        String[] firstNames = new String[team.length];
+
+        for (int i=0; i < team.length; i++) {
+            // add each instructor's firstName to the 'firstNames' String array
+            firstNames[i] = team[i].getFirstName();
+        }
+        for (String name : firstNames) {
+            System.out.println(name);
+        }
+        // More clever way to display the first names?
+        System.out.println(Arrays.toString(firstNames));
+
         //       11. Sum the brainwave frequencies, and display the total to the console
-        //       12. Sum the brainwave frequencies, and display the total to the console
-        //       13. Create a 2D array, and print it to the console, in grid form
+        int brainFreqSum = 0;
+        for (Instructor single : team) {
+            brainFreqSum +=  single.getBrainWaveFrequency();
+        }
+        double newFreqSum = brainFreqSum + 0.0;
+        // %d ~ "digits", like integers/whole numbers
+        // %f ~ "float", decimal numbers, higher precision
+        System.out.printf("Total Instructor Brainpower: %f MHz\n", newFreqSum/1000.0);
+
+        //       12. Create a 2D array, and print it to the console, in grid form
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+
+            System.out.print("| ");
+
+            for (int n : row) {
+                System.out.print(n + " | ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println("+---+---+---+");
+
+        System.out.println("+---+---+---+");
 
     }
 }
