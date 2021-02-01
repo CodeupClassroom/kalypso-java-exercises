@@ -10,13 +10,16 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    String getString(){
-        System.out.printf("Please enter a string: %n");
+    public String getString(){
+        return getString("Please enter a string:");
+    }
 
+    public String getString(String prompt){
+        System.out.println(prompt);
         return this.scanner.nextLine();
     }
 
-    boolean yesNo(){
+    public boolean yesNo(){
         System.out.printf("Please enter \"yes\" or \"no\": %n");
 
         String answer = this.scanner.nextLine();
@@ -24,12 +27,12 @@ public class Input {
                 answer.toLowerCase().equals("yes"));
     }
 
-    int getInt(){
+    public int getInt(){
         System.out.printf("Please enter an integer: %n");
         return this.scanner.nextInt();
     }
 
-    int getInt(int min, int max){
+    public int getInt(int min, int max){
         while (true) {
             System.out.printf("Please enter an integer between %d and %d: %n",min,max);
             int answer = this.scanner.nextInt();
@@ -38,12 +41,12 @@ public class Input {
         }
     }
 
-    double getDouble(){
+    public double getDouble(){
         System.out.printf("Please enter a double: %n");
         return this.scanner.nextDouble();
     }
 
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
         while (true) {
             System.out.printf("Please enter a double between %f and %f: %n",min,max);
             double answer = this.scanner.nextDouble();
