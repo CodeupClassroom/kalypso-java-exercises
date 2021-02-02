@@ -22,7 +22,7 @@ public class Input {
         return yesNo("Please enter \"yes\" or \"no\": ");
     }
     public boolean yesNo(String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt);
 
         String answer = this.scanner.nextLine();
         return (answer.toLowerCase().equals("y") ||
@@ -33,7 +33,7 @@ public class Input {
         return getInt("Please enter an integer: ");
     }
     public int getInt(String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt);
         return this.scanner.nextInt();
     }
 
