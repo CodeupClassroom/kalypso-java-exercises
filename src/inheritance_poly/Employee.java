@@ -6,6 +6,8 @@ class Employee extends Person {
 
     public Employee(String employeeName){
         super(employeeName);
+        // super keyword has access to everything that is not private
+        super.phone = "000-000-0000";
     }
 
     public void doWork() {
@@ -15,7 +17,7 @@ class Employee extends Person {
     // method overriding
     @Override
     public void sayHello() {
-        System.out.println("How can I help you?");
+        System.out.println("How can I help you? You can reach out at: " + this.phone);
     }
 
 }
