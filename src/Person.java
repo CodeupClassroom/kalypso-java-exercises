@@ -18,6 +18,10 @@ class Person {
         System.out.println("Hello, my name is " + this.name);
     }
 
+    public String toString() {
+        return name;
+    }
+
     public static void main(String[] args){
         Person bob = new Person("Bob");
         System.out.println(bob.getName());
