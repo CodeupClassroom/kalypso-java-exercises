@@ -1,5 +1,7 @@
 package inheritance_poly;
 
+import abstract_and_interfaces.Programmer;
+
 public class MainTest {
     public static void main(String[] args) {
 
@@ -8,7 +10,7 @@ public class MainTest {
         Person fer = new Person("Fer");
         fer.sayHello();
 
-        Employee sophie = new Employee("Sophie");
+        Employee sophie = new Programmer("Sophie");
         codeup[0] = sophie;
         sophie.sayHello();
 
