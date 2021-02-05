@@ -1,6 +1,6 @@
 package inheritance_poly;
 
-class Employee extends Person {
+public abstract class Employee extends Person {
 
     private double salary;
 
@@ -10,9 +10,7 @@ class Employee extends Person {
         super.phone = "000-000-0000";
     }
 
-    public void doWork() {
-        System.out.println("Work, work...");
-    }
+    abstract public void doWork();
 
     // method overriding
     @Override
