@@ -4,7 +4,7 @@ import util.Input;
 
 public class MoviesApplication {
 
-    // public static Movie[] allMovies; // property of the class (if you want to do it this way)
+    // public static Movie[] allMovies; // property of the class (ﬁﬁﬁif you want to do it this way)
 
     public static void main(String[] args) {
         // Use the Input class to grab a choice from the user:
