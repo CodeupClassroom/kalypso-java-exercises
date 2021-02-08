@@ -1,0 +1,3 @@
+class WrongIndentationTypeException extends Exception {
+
+}

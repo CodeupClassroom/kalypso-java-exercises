@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ExceptionsLec {
     public static void main(String[] args) {
         System.out.println("Do I run? A");
@@ -14,5 +16,26 @@ public class ExceptionsLec {
         }
 
         System.out.println("Do I run? B");
+
+        try {
+            System.out.println("getIndentationPreference() = " + getIndentationPreference());
+        } catch (Exception e) {
+            e.printStackTrace();
+            //rollBack(); if I was sending money
+        }
+
     }
+
+    public static String getIndentationPreference() throws Exception {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("What type of indentation do you prefer?");
+        String indentationPreference = sc.nextLine();
+
+        if (indentationPreference.equals("tabs")) {
+            throw new Exception("Spaces are superior!");
+        }
+
+        return indentationPreference;
+    }
+
 }
