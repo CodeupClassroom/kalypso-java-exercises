@@ -5,8 +5,12 @@ public class ExceptionsLec {
 
         try {
             System.out.println(numbers[999]);
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e){
             System.err.println("The array is shorter than 999");
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            System.out.println("This will always run.");
         }
 
         System.out.println("Do I run? B");
