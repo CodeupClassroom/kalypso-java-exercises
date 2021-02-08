@@ -19,20 +19,22 @@ public class ExceptionsLec {
 
         try {
             System.out.println("getIndentationPreference() = " + getIndentationPreference());
-        } catch (Exception e) {
+        } catch (WrongIndentationTypeException e) {
             e.printStackTrace();
             //rollBack(); if I was sending money
         }
 
     }
 
-    public static String getIndentationPreference() throws Exception {
+    public static String getIndentationPreference() throws WrongIndentationTypeException {
         Scanner sc = new Scanner(System.in);
         System.out.print("What type of indentation do you prefer?");
         String indentationPreference = sc.nextLine();
 
         if (indentationPreference.equals("tabs")) {
-            throw new Exception("Spaces are superior!");
+            WrongIndentationTypeException e;
+            e = new WrongIndentationTypeException("Spaces are superior!");
+            throw e;
         }
 
         return indentationPreference;
