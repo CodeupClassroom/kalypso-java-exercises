@@ -86,7 +86,7 @@ Below are examples of the type of problem you will encounter on the assessment. 
 
 1. Create an `Assessment` class with a public static method named `half`. It should accept a number and return the number divided by two.
 1. Within your `Assessment` class create a public static method named `shout`. It should accept a string and return the same string in all upper case with 3 exclamation marks added to the end of it.
-1. Create an `Animal` class. It should have private instance properties for a `name` and ``, and public getters and setters for both.
+1. Create an `Animal` class. It should have private instance properties for a `name` and `species`, and public getters and setters for both.
 1. Within your `Animal` class, define an instance method named `roar`. It should accept no arguments and return a string like "I am $NAME, hear me roar!" where `$NAME` is replaced with the value of the name property for that object.
 1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
 
